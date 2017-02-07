@@ -39,7 +39,7 @@
 								<artifactItem>
 									<groupId>org.webjars</groupId>
 									<artifactId>bootstrap</artifactId>
-									<version>3.3.1</version>
+									<version>3.3.7-1</version>
 									<type>jar</type>
 									<overWrite>true</overWrite>
 									<outputDirectory>${project.build.directory}/bootstrap</outputDirectory>
@@ -48,7 +48,7 @@
 								<artifactItem>
 									<groupId>org.webjars</groupId>
 									<artifactId>jquery</artifactId>
-									<version>1.11.1</version>
+									<version>1.12.4</version>
 									<type>jar</type>
 									<overWrite>true</overWrite>
 									<outputDirectory>${project.build.directory}/jquery</outputDirectory>
@@ -57,7 +57,7 @@
 								<artifactItem>
 									<groupId>org.webjars</groupId>
 									<artifactId>handlebars</artifactId>
-									<version>2.0.0</version>
+									<version>4.0.5</version>
 									<type>jar</type>
 									<overWrite>true</overWrite>
 									<outputDirectory>${project.build.directory}/handlebars</outputDirectory>
@@ -90,23 +90,23 @@
 						<configuration>
 							<target>
 								<copy 
-									file="${project.build.directory}/bootstrap/META-INF/resources/webjars/bootstrap/3.3.1/js/bootstrap.min.js" 
+									file="${project.build.directory}/bootstrap/META-INF/resources/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js"
 									todir="${destinationDir}/js" />
 								<copy 
-									file="${project.build.directory}/jquery/META-INF/resources/webjars/jquery/1.11.1/jquery.min.js" 
+									file="${project.build.directory}/jquery/META-INF/resources/webjars/jquery/1.12.4/jquery.min.js"
 									todir="${destinationDir}/js" />
 								<copy 
-									file="${project.build.directory}/jquery/META-INF/resources/webjars/jquery/1.11.1/jquery.min.map" 
+									file="${project.build.directory}/jquery/META-INF/resources/webjars/jquery/1.12.4/jquery.min.map"
 									todir="${destinationDir}/js" />	
 									
 								<copy 
-									file="${project.build.directory}/handlebars/META-INF/resources/webjars/handlebars/2.0.0/handlebars.min.js" 
+									file="${project.build.directory}/handlebars/META-INF/resources/webjars/handlebars/4.0.5/handlebars.min.js"
 									todir="${destinationDir}/js" />
 								<copy 
 									file="${project.build.directory}/prettify/META-INF/resources/webjars/prettify/4-Mar-2013/prettify.js" 
 									todir="${destinationDir}/js" />
 								<copy 
-									file="${project.build.directory}/bootstrap/META-INF/resources/webjars/bootstrap/3.3.1/css/bootstrap.min.css" 
+									file="${project.build.directory}/bootstrap/META-INF/resources/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"
 									todir="${destinationDir}/css" />
 							</target>
 						</configuration>
