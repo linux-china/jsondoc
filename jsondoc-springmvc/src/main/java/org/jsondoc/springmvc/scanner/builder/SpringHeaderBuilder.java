@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.jsondoc.core.pojo.ApiHeaderDoc;
+import org.springframework.core.annotation.AnnotatedElementUtils;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ValueConstants;
@@ -28,8 +29,8 @@ public class SpringHeaderBuilder {
 		Set<ApiHeaderDoc> headers = new LinkedHashSet<ApiHeaderDoc>();
 		Class<?> controller = method.getDeclaringClass();
 
-		RequestMapping typeAnnotation = controller.getAnnotation(RequestMapping.class);
-		RequestMapping methodAnnotation = method.getAnnotation(RequestMapping.class);
+		RequestMapping typeAnnotation = AnnotatedElementUtils.getMergedAnnotation(controller,RequestMapping.class);
+		RequestMapping methodAnnotation = AnnotatedElementUtils.getMergedAnnotation(method,RequestMapping.class);
 
 		if (typeAnnotation != null) {
 			List<String> headersStringList = Arrays.asList(typeAnnotation.headers());
